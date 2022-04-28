@@ -14,8 +14,18 @@ impl Solution {
             Self::fib(n-1) + Self::fib(n-2)
         }
     }
+
+    pub fn fib_dp(n: i32) -> i32 {
+        let mut dp = vec![0; 31];
+        dp[1] = 1;
+        for i in 2..=30 {
+            dp[i] = dp[i-1] + dp[i-2];
+        }
+        dp[n as usize]
+    }
 }
 
 fn main() {
-    println!("{:?}", Solution::fib(3));
+    println!("{:?}", Solution::fib(6));
+    println!("{:?}", Solution::fib_dp(6));
 }

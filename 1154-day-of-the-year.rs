@@ -11,7 +11,7 @@ pub fn day_of_year(date: String) -> i32 {
     );
     fn is_run_year(year: String) -> bool {
         let year: i32 = year.parse().unwrap();
-        (year % 100 == 0 && year % 40 == 0) || 
+        (year % 100 == 0 && year % 40 == 0) ||
         (year % 100 != 0 && year % 4 == 0)
     }
     let arr: Vec<String> = date.split("-")
@@ -28,7 +28,7 @@ pub fn day_of_year(date: String) -> i32 {
             run_year[0..month].iter().sum::<i32>() + day
         } else {
             un_run_year[0..month].iter().sum::<i32>() + day
-        } 
+        }
     }
 }
 

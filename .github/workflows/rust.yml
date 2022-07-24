@@ -20,5 +20,5 @@ jobs:
       run:  |
         for changed_file in ${{ steps.files.outputs.all }}; do
           rustc changed_file -o bin
-          bash bin
+          ./bin
         done

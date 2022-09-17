@@ -4,3 +4,4 @@
 *.rb
 *
 !*.rs
+!commit.sh
